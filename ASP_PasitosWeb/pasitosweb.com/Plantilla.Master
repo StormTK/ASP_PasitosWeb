@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Plantilla.master.cs" Inherits="ASP_PasitosWeb.pasitosweb.com.Plantilla" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Mis Pasitos Web</title>
+    <link href="css/Principal.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <h1>Mis Pasitos Web</h1>
+    </header>
+    <form id="form1" runat="server">
+    <main>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </main>
+    </form>
+    <footer>
+        <div>
+            <img src="img/Usac_logo.png" /><img src="img/Ingenieria_logo.png" />
+        </div>
+        <p>Desarrollado por Kebyn Felipe</p>
+    </footer>
+</body>
+</html>

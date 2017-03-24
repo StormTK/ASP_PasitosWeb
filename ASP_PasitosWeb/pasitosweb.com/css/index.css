@@ -1,0 +1,74 @@
+﻿section{
+    width: 100%;
+    position: relative;
+}
+
+section img{
+    width: 100%;
+}
+
+section .Anuncio{
+    width: 800px;
+    position: absolute;
+    top: 90px;
+    background: rgba(0,0,0,0.35);
+    right: 90px;
+}
+
+section .Anuncio h2{
+    color: #ffffff;
+    font-size: 80px;
+    padding: 10px 30px;
+}
+
+section .Anuncio p{
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.contenido{
+    width: 100%;
+    text-align: center;
+}
+
+.contenido h2{
+    font-size: 40px;
+}
+
+.Butones{
+    width: 120px;
+    display: inline-block;
+}
+
+.Butones a{
+     text-decoration: none;
+}
+
+.Button {
+   
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background: #b7b6b6;
+    border: 1px dashed #124d77;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #e6e4e4;
+    font-family: Arial;
+    font-size: 80px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #154682;
+}
+
+.Button:hover {
+    color: #fff;
+    position:relative;
+	top:-4px;
+}
+
+.Button:active {
+	position:relative;
+	top:1px;
+}
+

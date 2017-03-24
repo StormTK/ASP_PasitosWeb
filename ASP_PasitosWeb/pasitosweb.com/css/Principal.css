@@ -1,0 +1,52 @@
+﻿@font-face {
+    font-family: 'Carrington';
+    src: url('../fonts/Carrington.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+header{
+    width: 100%;
+    height: 55px;
+    background: #1a474c;
+    border-bottom: solid 2px #303030;
+}
+
+
+header h1{
+    text-align: center;
+    color: #fff;
+    font-family: 'Carrington';
+    font-size: 50px;
+}
+
+main{
+    
+}
+
+footer{
+    margin-top: 10px;
+    background: #1a474c;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+footer img{
+    width: 100px;
+    height: 100px;
+    padding: 10px 15px;
+}
+
+footer p{
+    padding: 20px 0px;
+    width: 100%;
+    background: #1a1a1a;
+
+}

@@ -66,8 +66,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pasitosweb.com\agregar.aspx" />
+    <Content Include="pasitosweb.com\css\index.css" />
+    <Content Include="pasitosweb.com\css\Principal.css" />
     <Content Include="packages.config" />
-    <Content Include="index.Master" />
+    <Content Include="pasitosweb.com\img\index.png" />
+    <Content Include="pasitosweb.com\img\Ingenieria_logo.png" />
+    <Content Include="pasitosweb.com\img\Pasos.png" />
+    <Content Include="pasitosweb.com\img\Usac_logo.png" />
+    <Content Include="pasitosweb.com\Plantilla.Master" />
+    <Content Include="pasitosweb.com\fonts\Carrington.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -77,18 +85,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="pasitosweb.com\index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="index.Master.cs">
-      <DependentUpon>index.Master</DependentUpon>
+    <Compile Include="pasitosweb.com\agregar.aspx.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.Master.designer.cs">
-      <DependentUpon>index.Master</DependentUpon>
+    <Compile Include="pasitosweb.com\agregar.aspx.designer.cs">
+      <DependentUpon>agregar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pasitosweb.com\Plantilla.Master.cs">
+      <DependentUpon>Plantilla.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasitosweb.com\Plantilla.Master.designer.cs">
+      <DependentUpon>Plantilla.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pasitosweb.com\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasitosweb.com\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
