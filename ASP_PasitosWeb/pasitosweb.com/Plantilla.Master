@@ -12,9 +12,9 @@
 </head>
 <body>
     <header>
-        <h1>Mis Pasitos Web</h1>
+        <a href="index.aspx"><h1>Mis Pasitos Web</h1></a>
     </header>
-    <form id="form1" runat="server">
+    <form id="pasitosweb" runat="server">
     <main>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         

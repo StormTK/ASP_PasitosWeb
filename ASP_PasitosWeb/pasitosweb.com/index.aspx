@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pasitosweb.com/Plantilla.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="ASP_PasitosWeb.pasitosweb.com.WebForm1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/index.css" rel="stylesheet" />
 </asp:Content>
@@ -12,19 +13,19 @@
     </section>
     <div class="contenido">
         <h2>¿Que Deseas Hacer?</h2>
-        <div class="Butones"> 
-            <a href="agregar.aspx">
+        <div class="Butones">
+            <a href="manual.aspx">
                 <div class="Button">+</div>
             </a>
             <p>Agregar un Curso Manualmente</p>
         </div>
-        <div class="Butones"> 
+        <div class="Butones">
             <a href="agregar.aspx">
                 <div class="Button">↑</div>
             </a>
             <p>Agregar un Curso Masivamente</p>
         </div>
-        <div class="Butones"> 
+        <div class="Butones">
             <a href="agregar.aspx">
                 <div class="Button">↓+</div>
             </a>
