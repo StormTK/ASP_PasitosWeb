@@ -14,20 +14,20 @@
     <div class="contenido">
         <h2>¿Que Deseas Hacer?</h2>
         <div class="Butones">
-            <a href="manual.aspx">
-                <div class="Button">+</div>
+            <a href="crearcurso.aspx">
+                <div class="Button"><span class="icon-insert"></span></div>
             </a>
-            <p>Agregar un Curso Manualmente</p>
+            <p>Agregar un Curso</p>
         </div>
         <div class="Butones">
-            <a href="agregar.aspx">
-                <div class="Button">↑</div>
+            <a href="cargarcurso.aspx">
+                <div class="Button"><span class="icon-upload"></span></div>
             </a>
-            <p>Agregar un Curso Masivamente</p>
+            <p>Agregar Varios Cursos</p>
         </div>
         <div class="Butones">
-            <a href="agregar.aspx">
-                <div class="Button">↓+</div>
+            <a href="mostrarcurso.aspx">
+                <div class="Button"><span class="icon-database"></span></div>
             </a>
             <p>Ver Cursos Registrados</p>
         </div>

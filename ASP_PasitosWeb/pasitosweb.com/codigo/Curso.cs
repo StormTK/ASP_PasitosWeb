@@ -8,8 +8,9 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
 {
     public class Curso
     {
-        //SqlConnection Conexion = new SqlConnection("Data Source=STORMTK-PC;Initial Catalog=ASOCOMER;Integrated Security=True");
-        SqlConnection Conexion = new SqlConnection("Data Source=FELIPEKD-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
+
+        SqlConnection Conexion = new SqlConnection("Data Source=STORMTK-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
+        //SqlConnection Conexion = new SqlConnection("Data Source=FELIPEKD-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
 
         public Boolean RegistrarCurso(int curso, string nombre)
         {

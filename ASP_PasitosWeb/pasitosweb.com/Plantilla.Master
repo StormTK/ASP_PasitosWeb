@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Plantilla.master.cs" Inherits="ASP_PasitosWeb.pasitosweb.com.Plantilla" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="plantilla.Master.cs" Inherits="ASP_PasitosWeb.pasitosweb.com.Plantilla" %>
 
 <!DOCTYPE html>
 
@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Mis Pasitos Web</title>
+    <link href="css/icomoon.css" rel="stylesheet" />
     <link href="css/Principal.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

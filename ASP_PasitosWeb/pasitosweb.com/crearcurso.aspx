@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pasitosweb.com/Plantilla.Master" AutoEventWireup="true" CodeBehind="manual.aspx.cs" Inherits="ASP_PasitosWeb.pasitosweb.com.manual" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pasitosweb.com/Plantilla.Master" AutoEventWireup="true" CodeBehind="crearcurso.aspx.cs" Inherits="ASP_PasitosWeb.pasitosweb.com.manual" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/manual.css" rel="stylesheet" />

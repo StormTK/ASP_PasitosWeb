@@ -66,6 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pasitosweb.com\css\icomoon.css" />
+    <Content Include="pasitosweb.com\fonts\icomoon.svg" />
+    <Content Include="pasitosweb.com\mostrarcurso.aspx" />
+    <Content Include="pasitosweb.com\cargarcurso.aspx" />
     <Content Include="pasitosweb.com\css\index.css" />
     <Content Include="pasitosweb.com\css\manual.css" />
     <Content Include="pasitosweb.com\css\Principal.css" />
@@ -74,9 +78,12 @@
     <Content Include="pasitosweb.com\img\Ingenieria_logo.png" />
     <Content Include="pasitosweb.com\img\Pasos.png" />
     <Content Include="pasitosweb.com\img\Usac_logo.png" />
-    <Content Include="pasitosweb.com\manual.aspx" />
-    <Content Include="pasitosweb.com\Plantilla.Master" />
+    <Content Include="pasitosweb.com\crearcurso.aspx" />
+    <Content Include="pasitosweb.com\plantilla.Master" />
     <Content Include="pasitosweb.com\fonts\Carrington.ttf" />
+    <Content Include="pasitosweb.com\fonts\icomoon.eot" />
+    <Content Include="pasitosweb.com\fonts\icomoon.ttf" />
+    <Content Include="pasitosweb.com\fonts\icomoon.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,20 +100,34 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="pasitosweb.com\mostrarcurso.aspx.cs">
+      <DependentUpon>mostrarcurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasitosweb.com\mostrarcurso.aspx.designer.cs">
+      <DependentUpon>mostrarcurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pasitosweb.com\cargarcurso.aspx.cs">
+      <DependentUpon>cargarcurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasitosweb.com\cargarcurso.aspx.designer.cs">
+      <DependentUpon>cargarcurso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pasitosweb.com\codigo\Curso.cs" />
-    <Compile Include="pasitosweb.com\manual.aspx.cs">
-      <DependentUpon>manual.aspx</DependentUpon>
+    <Compile Include="pasitosweb.com\crearcurso.aspx.cs">
+      <DependentUpon>crearcurso.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pasitosweb.com\manual.aspx.designer.cs">
-      <DependentUpon>manual.aspx</DependentUpon>
+    <Compile Include="pasitosweb.com\crearcurso.aspx.designer.cs">
+      <DependentUpon>crearcurso.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pasitosweb.com\Plantilla.Master.cs">
-      <DependentUpon>Plantilla.Master</DependentUpon>
+    <Compile Include="pasitosweb.com\plantilla.Master.cs">
+      <DependentUpon>plantilla.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pasitosweb.com\Plantilla.Master.designer.cs">
-      <DependentUpon>Plantilla.Master</DependentUpon>
+    <Compile Include="pasitosweb.com\plantilla.Master.designer.cs">
+      <DependentUpon>plantilla.Master</DependentUpon>
     </Compile>
     <Compile Include="pasitosweb.com\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

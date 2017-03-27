@@ -45,6 +45,10 @@
         text-decoration: none;
     }
 
+    .Butones p{
+        font-size: 20px;
+    }
+
 .Button {
     margin: 0 auto;
     width: 100px;
@@ -55,9 +59,12 @@
     cursor: pointer;
     color: #e6e4e4;
     font-family: Arial;
-    font-size: 80px;
+    font-size: 50px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #154682;
+    vertical-align: middle;
+    z-index: 1;
+    position: relative;
 }
 
     .Button:hover {
@@ -69,4 +76,11 @@
     .Button:active {
         position: relative;
         top: 1px;
+    }
+
+    .Button span{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 30;
     }
