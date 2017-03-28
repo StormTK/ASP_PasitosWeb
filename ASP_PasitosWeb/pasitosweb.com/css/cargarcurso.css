@@ -1,0 +1,13 @@
+﻿div {
+    width: 500px;
+    margin: 0 auto;
+    text-align:center;
+}
+
+    div input {
+        width: 500px;
+        height: 50px;
+        text-align: center;
+        border: 2px dashed #808080;
+        background: #f2f2f2;
+    }

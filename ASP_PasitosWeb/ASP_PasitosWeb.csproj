@@ -66,8 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pasitosweb.com\css\cargarcurso.css" />
     <Content Include="pasitosweb.com\css\icomoon.css" />
     <Content Include="pasitosweb.com\fonts\icomoon.svg" />
+    <Content Include="pasitosweb.com\jsp\SoloNumeros.js" />
     <Content Include="pasitosweb.com\mostrarcurso.aspx" />
     <Content Include="pasitosweb.com\cargarcurso.aspx" />
     <Content Include="pasitosweb.com\css\index.css" />
