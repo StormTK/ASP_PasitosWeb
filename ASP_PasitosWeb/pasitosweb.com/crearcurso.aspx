@@ -5,13 +5,32 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="formulario">
+         <%
+                              
+                if (Request.QueryString.Get("msg") != null)
+                {
+                    int msg = Int32.Parse(Request.QueryString.Get("msg"));
+                    switch (msg)
+                    {
+                        case 1:
+                            Response.Write("<div class=\"error\" > <p class=\"icon-cross\"> </p><p class=\"mensaje\"> Este Curso ya esta Registrado</p></div>");
+                            break;
+                        case 2:
+                            Response.Write("<div class=\"login\" > <p class=\"icon-check-mark\"> </p><p class=\"mensaje\"> Se ha Registrado el curso con Exito</p></div>");
+                            break;
+                        case 3:
+                           Response.Write("<div class=\"error\" > <p class=\"icon-cross\"> </p><p class=\"mensaje\"> El PreRequisito no se ha registrado aun</p></div>");
+                            break;
+                    }
+                }
+            %>
         <h2>Ingrese el Curso</h2>
         <p>Ingrese el Codigo del Curso</p>
         <asp:TextBox runat="server" ID="txt_codigo" CssClass="txt_formulario"></asp:TextBox>
         <p>Ingrese el Nombre del Curso</p>
         <asp:TextBox runat="server" ID="txt_nombre" CssClass="txt_formulario"></asp:TextBox>
-        <p>Ingrese el Prerequisito del Curso</p>
-        <asp:TextBox runat="server" ID="txt_requisito1" CssClass="txt_formulario"></asp:TextBox>
+        <p>Ingrese el codigo del Prerequisito del Curso</p>
+        <asp:TextBox runat="server" ID="txt_requisito" CssClass="txt_formulario"></asp:TextBox>
         <asp:Button ID="btn_Enviar" Class="Button" runat="server" Text="Registrar" OnClick="btn_Registrar_Click" />
     </div>
 </asp:Content>

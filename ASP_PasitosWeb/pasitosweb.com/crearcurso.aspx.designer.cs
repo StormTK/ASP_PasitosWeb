@@ -31,13 +31,13 @@ namespace ASP_PasitosWeb.pasitosweb.com {
         protected global::System.Web.UI.WebControls.TextBox txt_nombre;
         
         /// <summary>
-        /// Control txt_requisito1.
+        /// Control txt_requisito.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_requisito1;
+        protected global::System.Web.UI.WebControls.TextBox txt_requisito;
         
         /// <summary>
         /// Control btn_Enviar.

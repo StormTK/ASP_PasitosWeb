@@ -20,9 +20,14 @@ namespace ASP_PasitosWeb.pasitosweb.com
             String codigo = txt_codigo.Text;
             int numcodigo = Int32.Parse(codigo);
             String nombre = txt_nombre.Text;
+            String requisito = txt_requisito.Text;
             if (Registrar.RegistrarCurso(numcodigo, nombre))
             {
-                Response.Redirect("index.aspx", false);
+                Response.Redirect("index.aspx?msg=2", false);
+            }
+            else
+            {
+                Response.Redirect("index.aspx?msg=1", false);
             }
         }
     }

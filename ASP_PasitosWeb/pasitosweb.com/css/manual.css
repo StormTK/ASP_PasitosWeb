@@ -16,6 +16,31 @@
     text-align: center;
 }
 
+    .formulario .error {
+        margin-top: 10px;
+        font-size: 20px;
+        overflow: hidden;
+        height: 1%;
+        font-size: 20px;
+    }
+
+        .formulario .error .icon-error {
+            padding: 5px 10px 0px;
+            font-size: 50px;
+            height: 60px;
+        }
+
+        .formulario .error .mensaje {
+            padding: 15px 5px;
+            width: calc(100% - 80px);
+        }
+
+        .formulario .error p {
+            float: left;
+            color: #510909;
+        }
+
+
     .formulario h2 {
         font-size: 40px;
     }
