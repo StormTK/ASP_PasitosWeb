@@ -51,8 +51,10 @@ namespace ASP_PasitosWeb.pasitosweb.com
         }
         public void leerArchivo(String Ruta)
         {
+            int error = 0;
             int contador = 0;
             String Linea = "";
+
             System.IO.StreamReader file = new System.IO.StreamReader(@Ruta);
 
             while ((Linea = file.ReadLine()) != null)
@@ -60,8 +62,51 @@ namespace ASP_PasitosWeb.pasitosweb.com
                 if (contador > 0)
                 {
                     string[] datos = Linea.Split(',');
+
+                    String nombrecurso = datos[0];
+
                     int credito = Int32.Parse(datos[1]);
-                    Agregar.RegistrarCurso(datos[0], credito);
+
+                    String nombrerequisito = datos[2];
+
+                    if (Agregar.VerificarCurso(nombrerequisito))
+                    {//Existe Prerrquisito
+                        if (Agregar.VerificarCurso(nombrecurso))//Existe Curso
+                        {//Si Existe
+                            if (Agregar.RegistrarPrerequisito(nombrecurso, nombrerequisito))
+                            {//Se registra Prerrequisito
+
+                            }
+                            else
+                            {//No se Registra Prerrequisito
+                                error++;
+                            }
+                        }
+                        else
+                        {//No Existe
+                            if (Agregar.RegistrarCurso(nombrecurso, credito))//Se registra
+                            {//si
+                                if (Agregar.RegistrarPrerequisito(nombrecurso, nombrerequisito))
+                                {//Se registra Prerrequisito
+
+                                }
+                                else
+                                {
+                                    error++;
+                                }
+                            }
+                            else
+                            {//no
+                                error++;
+                            }
+                        }
+
+                    }
+                    else
+                    {//No Existe Pre
+                        error++;
+                    }
+
                 }
                 contador++;
             }
@@ -79,6 +124,16 @@ namespace ASP_PasitosWeb.pasitosweb.com
                     return;
                 }
             }
+
+            if(error > 0)
+            {
+                Response.Redirect("cargarcurso.aspx?msg=5", false);
+            }
+            else
+            {
+                Response.Redirect("cargarcurso.aspx?msg=3", false);
+            }
+
         }
     }
 }

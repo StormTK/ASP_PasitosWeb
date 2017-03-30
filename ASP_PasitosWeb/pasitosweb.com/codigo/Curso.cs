@@ -9,8 +9,8 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
     public class curso
     {
 
-        //SqlConnection Conexion = new SqlConnection("Data Source=STORMTK-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
-        SqlConnection Conexion = new SqlConnection("Data Source=FELIPEKD-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
+        SqlConnection Conexion = new SqlConnection("Data Source=STORMTK-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
+        //SqlConnection Conexion = new SqlConnection("Data Source=FELIPEKD-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
         public String MostrarCursos()
         {
             String stg_sql = "SELECT * FROM CURSO ORDER BY Nombre";
@@ -27,7 +27,7 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
                     
                     HTML += "<tr><td>" + resultado["Nombre"].ToString() + "</td>";
                     HTML += "<td>" + resultado["NoCredito"].ToString() + "</td>";
-                    HTML += "<td>" + VerPrerequisito(numerocodigo) + "</td>"; 
+                    
                 }
                 HTML += "</table></div>";
                 Conexion.Close();
@@ -40,31 +40,6 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
                 return "<p class=\"invalido\">:c <br />Error 404<br />No se Pudo Conectar al Servidor </p>";
             }
            
-        }
-        public String VerPrerequisito(int curso)
-        {
-            String stg_sql = "SELECT CURSO.Nombre FROM CURSO INNER JOIN PRERREQUISITO ON CURSO.Codigo = PRERREQUISITO.PreCurso WHERE PRERREQUISITO.Curso = @Curso";
-            try
-            {
-                Conexion.Open();
-                SqlCommand cmd = new SqlCommand(stg_sql, Conexion);
-                cmd.Parameters.AddWithValue("@Curso", curso);
-                SqlDataReader resultado = cmd.ExecuteReader();
-                String prerequisito = "";
-                while (resultado.Read())
-                {
-                    prerequisito +=  resultado["Nombre"].ToString() + ", ";
-
-                }
-                Conexion.Close();
-                return prerequisito;
-            }
-            catch (Exception DetalleError)
-            {
-                String MensajeError = "Insert Error:";
-                MensajeError += DetalleError.Message;
-                return MensajeError;
-            }
         }
         public Boolean RegistrarCurso(string nombre, int credito)
         {
@@ -106,35 +81,7 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
             }
             return false;
         }
-        public int VerificarCodigoCurso(String nombre)
-        {
-            String stg_sql = "SELECT Codigo FROM CURSO WHERE Nombre = @Nombre";
-            try
-            {
-                Conexion.Open();
-                SqlCommand cmd = new SqlCommand(stg_sql, Conexion);//ejecutamos la instruccion
-                cmd.Parameters.AddWithValue("@Nombre", nombre); //enviamos los parametros
-                SqlDataReader resultado = cmd.ExecuteReader();
-                resultado.Read();
-                String codigo = resultado["codigo"].ToString();
-                Conexion.Close();
-                if (codigo == null || codigo.Equals(""))
-                {
-                    return 0;
-                }
-                else
-                {
-                    int numcodigo = Int32.Parse(codigo);
-                    return numcodigo;
-                }
-            }
-            catch (Exception DetalleError)
-            {
-                String MensajeError = "Insert Error:";
-                MensajeError += DetalleError.Message;
-                return 0;
-            }
-        }
+        
         public Boolean VerificarCurso(string nombre)
         {
             String stg_sql = "SELECT COUNT(*)FROM CURSO WHERE Nombre = @Nombre";

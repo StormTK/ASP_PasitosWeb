@@ -35,6 +35,9 @@
                         case 7:
                             Response.Write("<div class=\"error\" > <p class=\"icon-cross\"> </p><p class=\"mensaje\"> ERROR <br /> El PreRequisito ya esta regristrado en la Aplicación</p></div>");
                             break;
+                        case 8:
+                            Response.Write("<div class=\"exito\" > <p class=\"icon-checkmark\"> </p><p class=\"mensaje\"> Se ha Registrado el nuevo PreRequisito al Curso con Exito</p></div>");
+                            break;
                     }
                 }
             %>

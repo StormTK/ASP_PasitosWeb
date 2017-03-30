@@ -96,7 +96,6 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="pasitosweb.com\index.aspx" />
-    <Content Include="pasitosweb.com\vercurso.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -131,13 +130,6 @@
     </Compile>
     <Compile Include="pasitosweb.com\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pasitosweb.com\vercurso.aspx.cs">
-      <DependentUpon>vercurso.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pasitosweb.com\vercurso.aspx.designer.cs">
-      <DependentUpon>vercurso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
