@@ -26,7 +26,7 @@
             <p>Agregar Varios Cursos</p>
         </div>
         <div class="Butones">
-            <a href="mostrarcurso.aspx">
+            <a href="vercurso.aspx">
                 <div class="Button"><span class="icon-database"></span></div>
             </a>
             <p>Ver Cursos Registrados</p>

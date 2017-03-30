@@ -1,8 +1,9 @@
 CREATE DATABASE PASITOSWEB
 
 CREATE TABLE CURSO(
-	Codigo		int	primary key,
-	Nombre		Varchar(60) NOT NULL
+	Codigo		int	primary key identity,
+	Nombre		Varchar(60) NOT NULL,
+	NoCredito		int NOT NULL
 );
 
 CREATE TABLE PRERREQUISITO(
@@ -15,4 +16,9 @@ CREATE TABLE PRERREQUISITO(
 
 select * from CURSO;
 select * from PRERREQUISITO;
-SELECT COUNT(*)FROM CURSO WHERE Codigo = 1;
+
+drop Table PRERREQUISITO, CURSO;
+
+delete from CURSO
+
+DROP DATABASE PASITOSWEB

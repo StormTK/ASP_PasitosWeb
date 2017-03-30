@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Mis Pasitos Web</title>
     <link href="css/icomoon.css" rel="stylesheet" />
     <link href="css/Principal.css" rel="stylesheet" />
@@ -13,14 +13,14 @@
 </head>
 <body>
     <header>
-        <a href="index.aspx"><h1>Mis Pasitos Web</h1></a>
+        <a href="index.aspx" name="Regresar al Inicio"><span class="icon-home"></span> </a>
+        <h1>Mis Pasitos Web</h1>
     </header>
-    <form id="pasitosweb" runat="server">
-    <main>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </main>
+    <form id="pasitosweb" runat="server" accept-charset="utf-8">
+        <main>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
     </form>
     <footer>
         <div>

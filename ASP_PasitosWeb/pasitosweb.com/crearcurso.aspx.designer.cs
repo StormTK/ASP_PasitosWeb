@@ -13,15 +13,6 @@ namespace ASP_PasitosWeb.pasitosweb.com {
     public partial class manual {
         
         /// <summary>
-        /// Control txt_codigo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_codigo;
-        
-        /// <summary>
         /// Control txt_nombre.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace ASP_PasitosWeb.pasitosweb.com {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_nombre;
+        
+        /// <summary>
+        /// Control txt_credito.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_credito;
         
         /// <summary>
         /// Control txt_requisito.

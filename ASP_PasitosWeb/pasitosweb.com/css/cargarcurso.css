@@ -1,13 +1,139 @@
-﻿div {
-    width: 500px;
-    margin: 0 auto;
-    text-align:center;
+﻿.contenido {
+    background: url("../img/agregar.jpg") #fff;
+    background-position: center;
+    padding: 80px 0px;
 }
 
-    div input {
+.formulario {
+    margin: 0px auto;
+    min-height: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 0px 1px 0px #000;
+    text-align: center;
+    padding: 6px 24px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .formulario .error {
+        margin-top: 10px;
+        font-size: 20px;
+        overflow: hidden;
+        height: 1%;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 2px dashed #510909;
+    }
+
+        .formulario .error .icon-cross {
+            padding: 25px 0px 0px 15px;
+            font-size: 60px;
+        }
+
+        .formulario .error .mensaje {
+            padding: 15px 5px;
+            width: calc(100% - 100px);
+        }
+
+        .formulario .error p {
+            float: left;
+            color: #8d0000;
+        }
+
+    .formulario .exito {
+        margin-top: 10px;
+        font-size: 20px;
+        overflow: hidden;
+        height: 1%;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px dashed #22520a;
+    }
+
+        .formulario .exito .icon-checkmark {
+            padding: 10px 0px 0px 15px;
+            font-size: 60px;
+        }
+
+        .formulario .exito .mensaje {
+            padding: 15px 5px;
+            width: calc(100% - 100px);
+        }
+
+        .formulario .exito p {
+            float: left;
+            color: #76f704;
+        }
+
+    .formulario h2 {
+        margin-top: 20px;
+        font-size: 40px;
+        color: #e9e409;
+        text-shadow: 0px 2px 0px #000;
+    }
+
+    .formulario input {
+        margin: 25px 0px;
         width: 500px;
         height: 50px;
         text-align: center;
         border: 2px dashed #808080;
         background: #f2f2f2;
+        color: #000;
     }
+
+    .formulario .Button {
+        width: 400px;
+        height: 50px;
+        -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+        -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+        box-shadow: 0px 10px 14px -7px #3e7327;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+        background: -moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+        background: -webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+        background: -o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+        background: -ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+        background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+        background-color: #77b55a;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border: 1px solid #4b8f29;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 15px 42px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #5b8a3c;
+        margin: 25px 0px;
+    }
+
+        .formulario .Button:hover {
+            font-size: 20px;
+            padding: 12px 42px;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+            background: -moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: -webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: -o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: -ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+            background-color: #72b352;
+        }
+
+        .formulario .Button:active {
+            position: relative;
+            top: 1px;
+        }

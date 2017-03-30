@@ -9,7 +9,7 @@ namespace ASP_PasitosWeb.pasitosweb.com
 {
     public partial class manual : System.Web.UI.Page
     {
-        codigo.Curso Registrar = new codigo.Curso();
+        codigo.curso Registrar = new codigo.curso();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,64 +17,79 @@ namespace ASP_PasitosWeb.pasitosweb.com
 
         protected void btn_Registrar_Click(object sender, EventArgs e)
         {
-            String codigo = txt_codigo.Text;
-            String nombre = txt_nombre.Text;
-            String requisito = txt_requisito.Text;
+            String credito = txt_credito.Text; //codgio curso
+            String nombre = txt_nombre.Text; //nombre curso
+            String requisito = txt_requisito.Text; //codigo requisito
 
-            if (codigo == null || nombre == null || codigo.Equals("") || nombre.Equals(""))//Si esta vacio
+            if (credito == null || nombre == null)//Si esta Vacio
             {
                 Response.Redirect("crearcurso.aspx?msg=1", false);
             }
-            else
-            {
-                int numcodigo = Int32.Parse(codigo);
-                if (Registrar.VerificarCurso(numcodigo))//Si el Curso Existe
-                {
+            else if (credito.Equals("") || nombre.Equals(""))
+            {//Si no tiene nada escrito
+                Response.Redirect("crearcurso.aspx?msg=1", false);
+            }
+            else if (requisito.Equals("") || requisito == null)// Si no esta Vacio y Tiene Algo escrito y
+            {//Si Requisito esta Vacio
+                if (Registrar.VerificarCurso(nombre))//Si se ha registrado
+                {//Si esta registrado
                     Response.Redirect("crearcurso.aspx?msg=2", false);
                 }
-                else //Si el Curso no Exite
-                {
-                    if (requisito == null || requisito.Equals("")) //requisito esta vacio o no
+                else
+                {//Si no esta Registrado
+                    int numcredito = Int32.Parse(credito);
+                    if (Registrar.RegistrarCurso(nombre, numcredito))//si el curso se pudo registrar
                     {
-                        if (Registrar.RegistrarCurso(numcodigo, nombre))//Registrar Curso
+                        Response.Redirect("crearcurso.aspx?msg=3", false);
+                    }
+                    else
+                    {
+                        Response.Redirect("crearcurso.aspx?msg=4", false);
+                    }
+                }
+            }
+            else
+            {//Si Requisito no esta Vacio
+                if (Registrar.VerificarCurso(requisito))//
+                {//Si el Requisito Existe
+                    int numcredito = Int32.Parse(credito);
+                    if (Registrar.RegistrarCurso(nombre, numcredito))//si el curso se pudo registrar
+                    {
+                        int Curso = Registrar.VerificarCodigoCurso(nombre);
+                        int PreCurso = Registrar.VerificarCodigoCurso(requisito);
+                        if (PreCurso == 0)
                         {
-                            Response.Redirect("crearcurso.aspx?msg=3", false);//Si se Registro
-                        }
-                        else
+                            Response.Redirect("crearcurso.aspx?msg=5", false);
+                        }else
                         {
-                            Response.Redirect("crearcurso.aspx?msg=4", false);//No se Registro
+                            if(Curso == 0)
+                            {
+                                Response.Redirect("crearcurso.aspx?msg=6", false);
+                            }else
+                            {
+                                if (Registrar.RegistrarPrerequisito(Curso,PreCurso))
+                                {
+                                    Response.Redirect("crearcurso.aspx?msg=3", false);
+                                }
+                                else
+                                {
+                                    Response.Redirect("crearcurso.aspx?msg=6", false);
+                                }
+                            }
                         }
                     }
                     else
                     {
-                        int numcrequisito = Int32.Parse(codigo);
-                        if (Registrar.VerificarCurso(numcrequisito))//Verificar si Existe Prerequisito
-                        {
-                            if (Registrar.RegistrarCurso(numcodigo, nombre))//Registrar Curso
-                            {
-                                if (Registrar.RegistrarPrerequisito(numcodigo, numcrequisito))//Registrar Curso
-                                {
-                                    Response.Redirect("crearcurso.aspx?msg=3", false);//Si se Registro
-                                }
-                                else
-                                {
-                                    Response.Redirect("crearcurso.aspx?msg=4", false);//No se Registro
-                                }
-                            }
-                            else
-                            {
-                                Response.Redirect("crearcurso.aspx?msg=4", false);//No se Registro
-                            }
-                        }
-                        else
-                        {
-                            Response.Redirect("crearcurso.aspx?msg=5", false);//No Existe el Prerrequisito
-                        }
+                        Response.Redirect("crearcurso.aspx?msg=4", false);
                     }
                 }
-
-
+                else
+                {//Si Requisito no se a agregado a la base de datos
+                    Response.Redirect("crearcurso.aspx?msg=5", false);
+                }
             }
+
         }
+
     }
 }

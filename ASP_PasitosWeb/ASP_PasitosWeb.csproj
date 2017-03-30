@@ -69,11 +69,11 @@
     <Content Include="pasitosweb.com\css\cargarcurso.css" />
     <Content Include="pasitosweb.com\css\icomoon.css" />
     <Content Include="pasitosweb.com\fonts\icomoon.svg" />
+    <Content Include="pasitosweb.com\img\agregar.jpg" />
     <Content Include="pasitosweb.com\jsp\SoloNumeros.js" />
-    <Content Include="pasitosweb.com\mostrarcurso.aspx" />
     <Content Include="pasitosweb.com\cargarcurso.aspx" />
     <Content Include="pasitosweb.com\css\index.css" />
-    <Content Include="pasitosweb.com\css\manual.css" />
+    <Content Include="pasitosweb.com\css\agregarcurso.css" />
     <Content Include="pasitosweb.com\css\Principal.css" />
     <Content Include="packages.config" />
     <Content Include="pasitosweb.com\img\index.png" />
@@ -96,18 +96,12 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="pasitosweb.com\index.aspx" />
+    <Content Include="pasitosweb.com\vercurso.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="pasitosweb.com\mostrarcurso.aspx.cs">
-      <DependentUpon>mostrarcurso.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pasitosweb.com\mostrarcurso.aspx.designer.cs">
-      <DependentUpon>mostrarcurso.aspx</DependentUpon>
     </Compile>
     <Compile Include="pasitosweb.com\cargarcurso.aspx.cs">
       <DependentUpon>cargarcurso.aspx</DependentUpon>
@@ -116,7 +110,7 @@
     <Compile Include="pasitosweb.com\cargarcurso.aspx.designer.cs">
       <DependentUpon>cargarcurso.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pasitosweb.com\codigo\Curso.cs" />
+    <Compile Include="pasitosweb.com\codigo\curso.cs" />
     <Compile Include="pasitosweb.com\crearcurso.aspx.cs">
       <DependentUpon>crearcurso.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -138,11 +132,19 @@
     <Compile Include="pasitosweb.com\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pasitosweb.com\vercurso.aspx.cs">
+      <DependentUpon>vercurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pasitosweb.com\vercurso.aspx.designer.cs">
+      <DependentUpon>vercurso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="pasitosweb.com\temp\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
