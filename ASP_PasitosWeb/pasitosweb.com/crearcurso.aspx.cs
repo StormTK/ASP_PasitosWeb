@@ -52,36 +52,7 @@ namespace ASP_PasitosWeb.pasitosweb.com
             {//Si Requisito no esta Vacio
                 if (Registrar.VerificarCurso(requisito))//
                 {//Si el Requisito Existe
-                    int numcredito = Int32.Parse(credito);
-                    if (Registrar.RegistrarCurso(nombre, numcredito))//si el curso se pudo registrar
-                    {
-                        int Curso = Registrar.VerificarCodigoCurso(nombre);
-                        int PreCurso = Registrar.VerificarCodigoCurso(requisito);
-                        if (PreCurso == 0)
-                        {
-                            Response.Redirect("crearcurso.aspx?msg=5", false);
-                        }else
-                        {
-                            if(Curso == 0)
-                            {
-                                Response.Redirect("crearcurso.aspx?msg=6", false);
-                            }else
-                            {
-                                if (Registrar.RegistrarPrerequisito(Curso,PreCurso))
-                                {
-                                    Response.Redirect("crearcurso.aspx?msg=3", false);
-                                }
-                                else
-                                {
-                                    Response.Redirect("crearcurso.aspx?msg=6", false);
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        Response.Redirect("crearcurso.aspx?msg=4", false);
-                    }
+                    Response.Redirect("crearcurso.aspx?msg=3", false);
                 }
                 else
                 {//Si Requisito no se a agregado a la base de datos

@@ -9,8 +9,8 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
     public class curso
     {
 
-        SqlConnection Conexion = new SqlConnection("Data Source=STORMTK-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
-        //SqlConnection Conexion = new SqlConnection("Data Source=FELIPEKD-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
+        //SqlConnection Conexion = new SqlConnection("Data Source=STORMTK-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
+        SqlConnection Conexion = new SqlConnection("Data Source=FELIPEKD-PC;Initial Catalog=PASITOSWEB;Integrated Security=True");
         public String MostrarCursos()
         {
             String stg_sql = "SELECT * FROM CURSO ORDER BY Nombre";
@@ -86,7 +86,7 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
                 return false;
             }
         }
-        public Boolean RegistrarPrerequisito(int curso, int prerrequisito)
+        public Boolean RegistrarPrerequisito(String curso, String prerrequisito)
         {
             String stg_sql = "INSERT INTO PRERREQUISITO(Curso, PreCurso) VALUES (@Codigo, @PreRequisito)";
             try
@@ -143,6 +143,29 @@ namespace ASP_PasitosWeb.pasitosweb.com.codigo
                 Conexion.Open();
                 SqlCommand cmd = new SqlCommand(stg_sql, Conexion);//ejecutamos la instruccion
                 cmd.Parameters.AddWithValue("@Nombre", nombre); //enviamos los parametros
+                int count = Convert.ToInt32(cmd.ExecuteScalar()); //devuelve la fila afectada
+                Conexion.Close();
+                if (count == 0)
+                    return false;
+                else
+                    return true;
+            }
+            catch (Exception DetalleError)
+            {
+                String MensajeError = "Insert Error:";
+                MensajeError += DetalleError.Message;
+                return false;
+            }
+        }
+        public Boolean VerificarPreCurso(String curso, String precurso)
+        {
+            String stg_sql = "SELECT COUNT(*)FROM PRERREQUISITO WHERE Curso = @Curso AND PreCurso = @PreCurso";
+            try
+            {
+                Conexion.Open();
+                SqlCommand cmd = new SqlCommand(stg_sql, Conexion);//ejecutamos la instruccion
+                cmd.Parameters.AddWithValue("@Nombre", curso); //enviamos los parametros
+                cmd.Parameters.AddWithValue("@Nombre", precurso); //enviamos los parametros
                 int count = Convert.ToInt32(cmd.ExecuteScalar()); //devuelve la fila afectada
                 Conexion.Close();
                 if (count == 0)

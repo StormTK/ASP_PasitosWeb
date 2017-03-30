@@ -1,18 +1,19 @@
 CREATE DATABASE PASITOSWEB
 
 CREATE TABLE CURSO(
-	Codigo		int	primary key identity,
-	Nombre		Varchar(60) NOT NULL,
+	Nombre		Varchar(60) Primary Key,
 	NoCredito		int NOT NULL
 );
 
 CREATE TABLE PRERREQUISITO(
-	Curso		int NOT NULL,
-	PreCurso	int NOT NULL,
+	Curso		Varchar(60) NOT NULL,
+	PreCurso	Varchar(60) NOT NULL,
 	CONSTRAINT pk_prerequisito PRIMARY KEY(Curso, PreCurso),
-	CONSTRAINT fk_curso FOREIGN KEY(curso) REFERENCES CURSO(Codigo),
-	CONSTRAINT fk_Precurso FOREIGN KEY(Precurso) REFERENCES CURSO(Codigo)
+	CONSTRAINT fk_curso FOREIGN KEY(curso) REFERENCES CURSO(Nombre),
+	CONSTRAINT fk_Precurso FOREIGN KEY(Precurso) REFERENCES CURSO(Nombre)
 );
+
+
 
 select * from CURSO;
 select * from PRERREQUISITO;
